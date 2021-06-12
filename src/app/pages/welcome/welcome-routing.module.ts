@@ -12,7 +12,7 @@ const routes: Routes = [
  // { path: '', component: WelcomeComponent },
   {path: '', component: ProfileComponent },
   {path: 'work', component: WorkComponent },
-  {path:'Education',component:EducationComponent},
+  {path:'education',component:EducationComponent},
   {path:'projects',component:ProjectsComponent},
   {path:'skills',component:SkillsComponent},
   {path:'awards',component:AwardsComponent},
