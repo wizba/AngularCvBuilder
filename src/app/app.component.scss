@@ -5,6 +5,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.app-layout {
-  height: 100vh;
+.deco{
+  width: 100%;
+  height: 168px;
+  background-color:#ff7070;
+
+  position: absolute;
+  top: 0;
+
 }

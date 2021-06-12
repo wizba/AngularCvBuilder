@@ -1,20 +1,53 @@
-<nz-layout class="app-layout">
-  <div nz-row style="height: 100%;">
-    <div nz-col [style]="'padding-left: 25px;padding-right: 25px;padding-top: 30px;min-height:100%;'"
-      [nzXl]="{ span: 5 }" [nzLg]="{ span: 8 }" [nzMd]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzXs]="{ span: 24 }">
 
-      <app-Manu></app-Manu>
-    </div>
-    <div nz-col [style]="'padding-left: 30px;padding-right: 30px;padding-top: 30px;min-height:100%'"
-      [nzXl]="{ span: 10 }" [nzLg]="{ span: 16 }" [nzMd]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzXs]="{ span: 24 }"
-      style="height: 100px">
-<router-outlet></router-outlet>
+<div class="deco">
 
-    </div>
-    <div nz-col [style]="'padding-left: 30px;padding-right: 30px;padding-top: 30px;min-height:100%'"
-      [nzXl]="{ span: 9 }" [nzLg]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzXs]="{ span: 24 }"
-      style="height: 100px;background-color: blue;">col-6</div>
+</div>
+<div nz-row style="width: 100%">
+  <div
+    nz-col
+    [style]="
+      'padding-left: 25px;padding-right: 25px;padding-top: 30px;min-height:100%;'
+    "
+    [nzXl]="{ span: 5 }"
+    [nzLg]="{ span: 8 }"
+    [nzMd]="{ span: 24 }"
+    [nzSm]="{ span: 24 }"
+    [nzXs]="{ span: 24 }"
+  >
+    <app-Manu></app-Manu>
+  </div>
+  <div
+    nz-col
+    [style]="
+      'padding-left: 30px;padding-right: 30px;padding-top: 30px;min-height:100%'
+    "
+    [nzXl]="{ span: 10 }"
+    [nzLg]="{ span: 16 }"
+    [nzMd]="{ span: 24 }"
+    [nzSm]="{ span: 24 }"
+    [nzXs]="{ span: 24 }"
+    style="height: 100px"
+  >
+    <router-outlet></router-outlet>
+  </div>
+  <div
+    nz-col
+    [style]="
+      'padding-left: 30px;padding-right: 30px;padding-top: 30px;min-height:100%'
+    "
+    [nzXl]="{ span: 9 }"
+    [nzLg]="{ span: 24 }"
+    [nzMd]="{ span: 24 }"
+    [nzSm]="{ span: 24 }"
+    [nzXs]="{ span: 24 }"
+  >
+  <div class="rb_title_text_size rb_title rb_title_color">
+    <p>Profile section</p>
   </div>
 
-
-</nz-layout>
+  <div class="rb_title_text_size rb_title_color">
+    <p>Fill up all your profile infomation</p>
+  </div>
+    <div class="rb_conner rb_card_container rb_card"></div>
+  </div>
+</div>
