@@ -11,10 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { SharedModule } from './Shared/Shared.module';
 import { ManuComponent } from './Manu/Manu.component';
+import { AngularMyDatePickerModule } from 'angular-mydatepicker';
 
 registerLocaleData(en);
 
@@ -29,7 +28,8 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
-    SharedModule
+    SharedModule,
+    
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

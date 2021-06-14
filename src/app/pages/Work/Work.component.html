@@ -106,6 +106,7 @@
       <div style="width: 100%;">
         <nz-input-group [nzSuffix]="linkSuffix" >
           <input type="text" nz-input placeholder="e.g william.linked.com" />
+
         </nz-input-group>
         <ng-template #linkSuffix>
           <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
@@ -116,7 +117,8 @@
         </ng-template>
       </div>
 
-
+      <input angular-mydatepicker name="mydate" 
+      [options]="myOptions" #dp="angular-mydatepicker"/>
     </div>
     <div class="rb_flex">
 
