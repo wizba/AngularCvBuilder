@@ -31,3 +31,44 @@ body{
   color: whitesmoke;
 }
 
+
+
+/////////////////////forms/////////////////////////@at-root
+.rb_card_container{
+  background-color: white;
+    width: 100%;
+    display: flex
+}
+
+
+.rb_flex{
+  display: flex;
+  width: 100%;
+  padding: 20px 30px;
+
+  .rb_column:nth-child(1){
+    margin-right: 0.5rem;
+  }
+  .rb_column:nth-child(2){
+    margin-left: 0.5rem;
+  }
+  label{
+    font-size: 16px;
+    color: rgb(255, 112, 112);
+  }
+
+}
+
+.rb_column{
+  width: 50%;
+}
+.rb_field{
+  width: 100%;
+  padding: 20px 30px;
+}
+
+
+.ant-input-affix-wrapper {
+  background-color: #eee !important;
+}
+

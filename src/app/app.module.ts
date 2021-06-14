@@ -19,14 +19,13 @@ import { ManuComponent } from './Manu/Manu.component';
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       ManuComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,

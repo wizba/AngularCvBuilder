@@ -5,6 +5,126 @@
 <div class="rb_title_text_size rb_title_color">
   <p>Fill up all your profile infomation</p>
 </div>
+
 <div class="rb_conner rb_card_container rb_card">
+  <form action="" style="height: 100%;width: 100%;">
+    <div style="display:flex;padding-left:30px;padding-right:30px;padding-top:30px;position: relative;">
+      <nz-badge
+      nzStandalone
+      [nzCount]="4"
+      [nzStyle]="{ backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }"
+    ></nz-badge>
+    </div>
+    <div class="rb_flex">
+      <div class="rb_column">
+          <label>Company name</label>
+          <nz-input-group [nzSuffix]="nameSuffixInfo" >
+            <input type="text" nz-input placeholder="Enter your username" />
+          </nz-input-group>
+
+          <ng-template #nameSuffixInfo>
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+          </label>
+         </ng-template>
+      </div>
+      <div class="rb_column">
+        <label>Job title</label>
+        <nz-input-group [nzSuffix]="surnameSuffix" >
+          <input type="text" nz-input placeholder="Enter your username" />
+        </nz-input-group>
+
+        <ng-template #surnameSuffix>
+          <label  nzTooltipTitle="Extra information" nzType="info-circle">
+            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+              </svg>
+            </label>
+          </label>
+      </ng-template>
+    </div>
+    </div>
+    <div class="rb_flex">
+      <label nz-checkbox >Currently work</label>
+    </div>
+    <div class="rb_flex">
+      <div class="rb_column">
+          <label >email</label>
+          <nz-input-group [nzSuffix]="emailSuffix" >
+            <input type="text" nz-input placeholder="e.g someone@123.com" />
+          </nz-input-group>
+
+          <ng-template #emailSuffix>
+            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+              </svg>
+            </label>
+          </ng-template>
+      </div>
+      <div class="rb_column">
+        <label>Phone number</label>
+        <nz-input-group [nzSuffix]="phonenumberSuffix" >
+          <input type="text" nz-input placeholder="(+27) | 082 7533 263" />
+        </nz-input-group>
+
+        <ng-template #phonenumberSuffix>
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+          </label>
+        </ng-template>
+    </div>
+    </div>
+    <div class="rb_field">
+        <div>
+          <label class="rb_label">Home address</label>
+        </div>
+        <div style="width: 100%;">
+          <nz-input-group [nzSuffix]="homeAddressSuffix" >
+            <input type="text" nz-input placeholder="City, Surbub" />
+          </nz-input-group>
+
+          <ng-template #homeAddressSuffix>
+            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+              </svg>
+            </label>
+          </ng-template>
+        </div>
+
+    </div>
+    <div class="rb_field">
+
+        <label class="rb_label">Link</label>
+
+      <div style="width: 100%;">
+        <nz-input-group [nzSuffix]="linkSuffix" >
+          <input type="text" nz-input placeholder="e.g william.linked.com" />
+        </nz-input-group>
+        <ng-template #linkSuffix>
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+          </label>
+        </ng-template>
+      </div>
+
+
+    </div>
+    <div class="rb_flex">
+
+        <button nz-button nzType="primary"  nzShape="round" nzType="default"><i nz-icon nzType="download"></i>Download</button>
+        <button style="margin-left: 1rem;" nz-button nzType="primary"  nzShape="round" >save</button>
+
+
+    </div>
+  </form>
 
 </div>
