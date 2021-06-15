@@ -11,7 +11,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { FormsModule } from '@angular/forms';
-import { AngularMyDatePickerModule } from 'angular-mydatepicker';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 @NgModule({
   imports: [
@@ -25,7 +25,8 @@ import { AngularMyDatePickerModule } from 'angular-mydatepicker';
     NzBadgeModule,
     NzCheckboxModule,
     FormsModule,
-    AngularMyDatePickerModule
+    OwlDateTimeModule,
+     OwlNativeDateTimeModule
   ],
   declarations: [SharedComponent],
   exports:[
@@ -38,7 +39,8 @@ import { AngularMyDatePickerModule } from 'angular-mydatepicker';
     NzBadgeModule,
     NzCheckboxModule,
     FormsModule,
-    AngularMyDatePickerModule
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule
 
   ]
 })
