@@ -119,16 +119,16 @@
         </div>
         <div style="width: 100%;">
 
-            <textarea nz-input placeholder="Controlled autosize" [nzAutosize]="{ minRows: 3, maxRows: 5 }" style="height: 120px!important;background-color:#d9d9d9;"></textarea>
-
+            <textarea nz-input placeholder="Controlled autosize" [nzAutosize]="{ minRows: 3, maxRows: 5 }" style="background-color:#d9d9d9;"></textarea>
+            <button nz-button class="rb_primary rb_primary_border" nzShape="round" nzType="primary" style="margin-top: 10px;">+</button>
         </div>
 
     </div>
 
-    <div class="rb_flex">
+    <div class="rb_flex" style="margin-top: 0;padding-top: 0;">
 
-      <button nz-button nzType="primary"  nzShape="round" nzType="default"><i nz-icon nzType="download"></i>previous</button>
-      <button style="margin-left: 1rem;" nz-button nzType="primary"  nzShape="round" >next</button>
+      <button nz-button class="rb_primary_border"  nzShape="round" nzType="primary" nzType="default"><i nz-icon nzType="download"></i>previous</button>
+      <button class="rb_primary rb_primary_border" style="margin-left: 1rem;" nz-button nzType="primary"  nzShape="round" >next</button>
     </div>
   </form>
 
