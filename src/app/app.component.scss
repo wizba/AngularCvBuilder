@@ -14,3 +14,73 @@
   top: 0;
 
 }
+
+
+.rb_cv
+{
+
+  height: 100%;
+  overflow: scroll;
+  .cv{
+    width: 595px;
+    min-height: 842px;
+
+  }
+}
+
+.rb_cv_container{
+  padding: 20px;
+
+}
+
+.rb_flex_card{
+  display: flex;
+}
+
+
+.rb-col-border{
+  border: 0.5px solid transparent;
+  font-size: 12px;
+
+  .rb-display-flex {
+    display: none !important;
+  }
+}
+
+.rb-col-border:hover {
+  transition: 3s;
+  border: 0.5px solid #ff7070;
+  .rb_controll_icons{
+    transition: 4s;
+    //visibility:visible;
+    svg{
+      display: block;
+    }
+  }
+}
+
+.rb-text-default{
+  color: #737373 !important;
+}
+
+.rb_cv_card{
+  min-height: 70px;
+  padding: 10px;
+}
+
+.rb_profile_section{
+  width: 80px;
+
+}
+
+
+.rb_right{
+  justify-content: flex-end;
+}
+
+.rb_controll_icons{
+ // visibility: hidden;
+ svg{
+   display: none;
+ }
+}

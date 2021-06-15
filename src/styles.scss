@@ -76,7 +76,32 @@ body{
 .rb_primary{
   background-color: #ff7070;
  }
-
+ .rb_primary_text{
+   color: #ff7070;
+ }
  .rb_primary_border{
    border-color:#ff7070ff;
+ }
+
+
+
+
+ .rb_chip{
+   padding: 5px 10px;
+   border-radius: 20px;
+   color: rgb(124, 124, 124);
+   background-color: rgb(222, 222, 222);
+   font-size: 12px;
+   width: 100px;
+   display: flex;
+
+   .rb_content{
+     width: 70%;
+     font-size: 14px;
+     overflow: hidden;
+   }
+
+   .rb_svg{
+     width: 30%;
+   }
  }
