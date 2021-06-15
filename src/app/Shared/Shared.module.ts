@@ -26,7 +26,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     NzCheckboxModule,
     FormsModule,
     OwlDateTimeModule,
-     OwlNativeDateTimeModule
+     OwlNativeDateTimeModule,
+     CommonModule
   ],
   declarations: [SharedComponent],
   exports:[
@@ -40,7 +41,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     NzCheckboxModule,
     FormsModule,
     OwlDateTimeModule,
-    OwlNativeDateTimeModule
+    OwlNativeDateTimeModule,
+    CommonModule
 
   ]
 })

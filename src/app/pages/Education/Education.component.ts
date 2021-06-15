@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducationComponent implements OnInit {
 
+  checked = false;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
+changeChecked(){
+  this.checked =!this.checked;
+  console.log(this.checked);
+
+}
+
+
 
 }

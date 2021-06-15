@@ -6,5 +6,130 @@
   <p>Fill up all your profile infomation</p>
 </div>
 <div class="rb_conner rb_card_container rb_card">
+  <form action="" style="height: 100%;width: 100%;">
+    <div style="display:flex;padding-left:30px;padding-right:30px;padding-top:30px;position: relative;">
+      <nz-badge
+      nzStandalone
+      [nzCount]="4"
+      [nzStyle]="{ backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }"
+    ></nz-badge>
+    </div>
+    <div class="rb_flex">
+      <div class="rb_column">
+          <label>Institution name</label>
+          <nz-input-group [nzSuffix]="nameSuffixInfo" >
+            <input type="text" nz-input placeholder="Enter your username" />
+          </nz-input-group>
+
+          <ng-template #nameSuffixInfo>
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+          </label>
+         </ng-template>
+      </div>
+      <div class="rb_column">
+        <label>Course</label>
+        <nz-input-group [nzSuffix]="surnameSuffix" >
+          <input type="text" nz-input placeholder="e.g Ndip Engineering Computer Engineering" />
+        </nz-input-group>
+
+        <ng-template #surnameSuffix>
+          <label  nzTooltipTitle="Extra information" nzType="info-circle">
+            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+              </svg>
+            </label>
+          </label>
+      </ng-template>
+    </div>
+    </div>
+    <div class="rb_flex">
+      <div class="rb_column">
+          <label>Country of study</label>
+          <nz-input-group [nzSuffix]="nameSuffixInfo" >
+            <input type="text" nz-input placeholder="e.g South Africa" />
+          </nz-input-group>
+
+          <ng-template #nameSuffixInfo>
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+          </label>
+         </ng-template>
+      </div>
+      <div class="rb_column">
+        <label>Location</label>
+        <nz-input-group [nzSuffix]="surnameSuffix" >
+          <input type="text" nz-input placeholder="e.g Johannesburg" />
+        </nz-input-group>
+
+        <ng-template #surnameSuffix>
+          <label  nzTooltipTitle="Extra information" nzType="info-circle">
+            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+              </svg>
+            </label>
+          </label>
+      </ng-template>
+    </div>
+    </div>
+    <div class="rb_flex">
+      <label nz-checkbox (nzCheckedChange)="changeChecked()">Currently study here ?</label>
+    </div>
+    <div class="rb_flex">
+      <div class="rb_column">
+          <label >Start date</label>
+          <nz-input-group [nzSuffix]="emailSuffix" >
+            <input [owlDateTime]="startDate" [owlDateTimeTrigger]="startDate" placeholder="dd/mm/yyyy" type="text" nz-input  />
+            <owl-date-time #startDate></owl-date-time>
+          </nz-input-group>
+
+          <ng-template #emailSuffix>
+            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+              </svg>
+            </label>
+          </ng-template>
+      </div>
+      <div class="rb_column" >
+        <label>end date</label>
+        <nz-input-group [nzSuffix]="phonenumberSuffix" >
+          <input [owlDateTime]="endDate" [owlDateTimeTrigger]="endDate" placeholder="dd/mm/yyyy" type="text" nz-input [disabled]="checked" />
+            <owl-date-time #endDate></owl-date-time>
+        </nz-input-group>
+
+        <ng-template #phonenumberSuffix>
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+          </label>
+        </ng-template>
+    </div>
+    </div>
+    <div class="rb_field">
+        <div>
+          <label class="rb_label">Home address</label>
+        </div>
+        <div style="width: 100%;">
+
+            <textarea nz-input placeholder="Controlled autosize" [nzAutosize]="{ minRows: 3, maxRows: 5 }" style="height: 120px!important;background-color:#d9d9d9;"></textarea>
+
+        </div>
+
+    </div>
+
+    <div class="rb_flex">
+
+      <button nz-button nzType="primary"  nzShape="round" nzType="default"><i nz-icon nzType="download"></i>previous</button>
+      <button style="margin-left: 1rem;" nz-button nzType="primary"  nzShape="round" >next</button>
+    </div>
+  </form>
 
 </div>
