@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NzButtonSize } from 'ng-zorro-antd/button';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StoreService } from 'src/app/services/store/Store.service';
 
 @Component({
@@ -17,13 +17,13 @@ export class ProfileComponent implements OnInit,OnDestroy {
    */
   constructor(private formBuilder: FormBuilder,private storeService:StoreService) {
     this.profileForm = this.formBuilder.group({
-      name:[''],
-      surname:[''],
-      email:[''],
-      linkedin:[''],
-      phoneNumber:[''],
-      address:[''],
-      bio:['']
+      name:['',[Validators.required]],
+      surname:['',[Validators.required]],
+      email:['',[Validators.required]],
+      linkedin:['',[Validators.required]],
+      phoneNumber:['',[Validators.required]],
+      address:['',[Validators.required]],
+      bio:['',[Validators.required]]
     })
 
   }
@@ -36,9 +36,16 @@ export class ProfileComponent implements OnInit,OnDestroy {
   //saves user profile on distroy
   savePersonalinfor(){
       let formValue = this.profileForm.value;
-      console.log(formValue);
 
-      this.storeService.personalProfile = formValue;
+
+      console.log(formValue);
+      if(this.profileForm.valid){
+        this.storeService.personalProfile = formValue;
+      }else{
+          console.log('invalid results');
+
+      }
+
   }
 
 }

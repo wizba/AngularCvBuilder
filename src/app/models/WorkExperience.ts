@@ -1,5 +1,5 @@
 export interface WorkExperience{
-  companyName:string;
+  comapnyName:string;
   jobTitle:string;
   countryOfWork:string;
   location:string;

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { PersonalInfo } from 'src/app/models/personalInfo';
+import { WorkExperience } from 'src/app/models/WorkExperience';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import { PersonalInfo } from 'src/app/models/personalInfo';
 export class StoreService {
 
   private userProfile!: PersonalInfo;
+  private userWorkExp:WorkExperience[] =[];
 
   constructor() {
 
@@ -18,6 +20,14 @@ export class StoreService {
 
   set personalProfile(profile:PersonalInfo){
     this.userProfile = profile;
+  }
+
+  get workExperience():WorkExperience[]{
+    return this.userWorkExp;
+  }
+
+  set workExperience(work:WorkExperience[]){
+    this.userWorkExp = work;
   }
 
 }
