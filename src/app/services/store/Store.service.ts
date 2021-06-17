@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Award } from 'src/app/models/award';
 import { EducationInfo } from 'src/app/models/educationIfo';
 import { PersonalInfo } from 'src/app/models/personalInfo';
+import { Project } from 'src/app/models/projects';
 import { Skill } from 'src/app/models/skills';
 import { WorkExperience } from 'src/app/models/WorkExperience';
 
@@ -13,10 +15,10 @@ export class StoreService {
   private userWorkExp:WorkExperience[] =[];
   private educationInfo:EducationInfo[] =[];
   private skill:Skill[] = [];
+  private awards:Award[] = [];
+  private projects:Project[] =[];
 
-  constructor() {
-
-   }
+  constructor() {}
 
   get personalProfile():PersonalInfo{
     return this.userProfile;
@@ -48,6 +50,22 @@ export class StoreService {
 
   set skills(skills: Skill[]){
     this.skills = skills;
+  }
+
+  get userAwards():Award[]{
+    return this.awards;
+  }
+
+  set userAwards(awards:Award[]){
+      this.awards = awards;
+  }
+
+  get projectsArray(){
+    return this.projects;
+  }
+
+  set projectsArray(projects:Project[]){
+    this.projects = projects;
   }
 
 }

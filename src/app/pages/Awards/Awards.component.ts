@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { StoreService } from 'src/app/services/store/Store.service';
 
 @Component({
   selector: 'app-Awards',
@@ -10,14 +11,22 @@ export class AwardsComponent implements OnInit {
 
 
   awardForm:FormGroup;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,public storeService:StoreService) {
     this.awardForm = this.formBuilder.group({
-      awardName:[''],
-      dateObtained:[''],
+      awardName:['',[Validators.required]],
+      dateObtained:['',[Validators.required]],
       summary:['']
     });
   }
   ngOnInit() {
   }
+
+  addAwards(){
+    if(this.awardForm.valid){
+      let awardValue = this.awardForm.value;
+      this.storeService.userAwards.push(awardValue);
+    }
+  }
+
 
 }
