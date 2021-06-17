@@ -97,10 +97,10 @@
             </label>
           </ng-template>
       </div>
-      <div class="rb_column" >
+      <div class="rb_column" *ngIf="!checked">
         <label>end date</label>
         <nz-input-group [nzSuffix]="phonenumberSuffix" >
-          <input [owlDateTime]="endDate" [owlDateTimeTrigger]="endDate" placeholder="dd/mm/yyyy" type="text" nz-input [disabled]="checked" formControlName="endDate"/>
+          <input [owlDateTime]="endDate" [owlDateTimeTrigger]="endDate" placeholder="dd/mm/yyyy" type="text" nz-input  formControlName="endDate"/>
             <owl-date-time #endDate></owl-date-time>
         </nz-input-group>
 

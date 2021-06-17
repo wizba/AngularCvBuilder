@@ -6,7 +6,7 @@
   <p>Fill up all your profile infomation</p>
 </div>
 <div class="rb_conner rb_card_container rb_card">
-  <form action="" style="height: 100%;width: 100%;">
+  <form action="" style="height: 100%;width: 100%;" [formGroup]="projectForm">
     <div style="display:flex;padding-left:30px;padding-right:30px;padding-top:30px;position: relative;">
       <nz-badge
       nzStandalone
@@ -18,7 +18,7 @@
       <div class="rb_column" style="width:100%">
           <label>Project name</label>
           <nz-input-group [nzSuffix]="nameSuffixInfo" >
-            <input type="text" nz-input placeholder="Enter your username" />
+            <input type="text" nz-input placeholder="Enter your username" formControlName="projectName"/>
           </nz-input-group>
 
           <ng-template #nameSuffixInfo>
@@ -36,7 +36,7 @@
       </div>
       <div style="width: 100%;">
 
-          <textarea nz-input placeholder="Controlled autosize" [nzAutosize]="{ minRows: 3, maxRows: 5 }" style="background-color:#d9d9d9;"></textarea>
+          <textarea nz-input placeholder="Controlled autosize" [nzAutosize]="{ minRows: 3, maxRows: 5 }" style="background-color:#d9d9d9;" formControlName="summary"></textarea>
           <button nz-button class="rb_primary rb_primary_border" nzShape="round" nzType="primary" style="margin-top: 10px;">+</button>
       </div>
 

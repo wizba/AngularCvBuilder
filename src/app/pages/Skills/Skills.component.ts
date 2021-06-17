@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-Skills',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
-
+  projectForm:FormGroup;
+  constructor(private formBuilder: FormBuilder) {
+    this.projectForm = this.formBuilder.group({
+      groupName:[''],
+      skillName:['']
+    });
+  }
   ngOnInit() {
   }
 
