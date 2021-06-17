@@ -6,7 +6,7 @@
   <p>Fill up all your profile infomation</p>
 </div>
 <div class="rb_conner rb_card_container rb_card">
-  <form action="" style="height: 100%;width: 100%;">
+  <form action="" style="height: 100%;width: 100%;" [formGroup]=skillForm>
     <div style="display:flex;padding-left:30px;padding-right:30px;padding-top:30px;position: relative;">
       <nz-badge
       nzStandalone
@@ -18,7 +18,7 @@
       <div class="rb_column" style="width:100%">
         <label>Group name</label>
         <nz-input-group [nzSuffix]="nameSuffixInfo" >
-          <input type="text" nz-input placeholder="e.g Soft skills/Hard skills" />
+          <input type="text" nz-input placeholder="e.g Soft skills/Hard skills"  formControlName='groupName'/>
           </nz-input-group>
 
           <ng-template #nameSuffixInfo>
@@ -35,7 +35,7 @@
       <div class="rb_column" style="width:100%">
           <label>Skill name</label>
           <nz-input-group [nzSuffix]="nameSuffixInfo" >
-            <input type="text" nz-input placeholder="e.g Java" />
+            <input type="text" nz-input placeholder="e.g Java" formControlName='skillName'/>
 
           </nz-input-group>
 
@@ -50,22 +50,25 @@
 
     </div>
     <div class="rb_flex" style="margin-top: 0;padding-top: 0;">
-      <button nz-button class="rb_primary rb_primary_border" nzShape="round" nzType="primary" style="margin-top: 10px;">+</button>
+      <button nz-button class="rb_primary rb_primary_border" nzShape="round" nzType="primary" style="margin-top: 10px;" (click)="addSkill()">+</button>
     </div>
 
-    <div class="rb_flex" style="height: 200px;margin-top: 0;padding-top: 0;">
-         <div style="height: 100%;width:100%;">
-            <div class="rb_chip">
+    <div class="rb_flex" style="height: 200px;margin-top: 0;padding-top: 0; ">
+         <div style="height: 100%;width:100%;display: flex; overflow:auto;">
+            <span class="rb_chip" style="height: 30px;" *ngFor="let skill of this.currentSkills;let i = index">
               <div class="rb_content">
-                java
+                {{skill}}
               </div>
               <div class="rb_svg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
                 </svg>
               </div>
-            </div>
-         </div>
+            </span>
+          </div>
+    </div>
+    <div class="rb_flex" style="margin-top: 0;padding-top: 0;">
+      <button class="rb_primary_border" style="background-color: rgb(255, 208, 0);" nz-button nzType="primary"  nzShape="round" (click)="saveSkills()">save</button>
     </div>
     <div class="rb_flex" style="margin-top: 0;padding-top: 0;">
 

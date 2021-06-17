@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { EducationInfo } from 'src/app/models/educationIfo';
 import { PersonalInfo } from 'src/app/models/personalInfo';
+import { Skill } from 'src/app/models/skills';
 import { WorkExperience } from 'src/app/models/WorkExperience';
 
 @Injectable({
@@ -9,6 +11,8 @@ export class StoreService {
 
   private userProfile!: PersonalInfo;
   private userWorkExp:WorkExperience[] =[];
+  private educationInfo:EducationInfo[] =[];
+  private skill:Skill[] = [];
 
   constructor() {
 
@@ -28,6 +32,22 @@ export class StoreService {
 
   set workExperience(work:WorkExperience[]){
     this.userWorkExp = work;
+  }
+
+  get education(){
+    return this.educationInfo;
+  }
+
+  set education(education:EducationInfo[]){
+    this.educationInfo = education;
+  }
+
+  get skills(): Skill[]{
+    return this.skill;
+  }
+
+  set skills(skills: Skill[]){
+    this.skills = skills;
   }
 
 }

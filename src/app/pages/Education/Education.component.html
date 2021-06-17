@@ -120,7 +120,7 @@
         <div style="width: 100%;">
 
             <textarea nz-input placeholder="Controlled autosize" [nzAutosize]="{ minRows: 5, maxRows: 5 }" style="background-color:#d9d9d9;" formControlName="summary"></textarea>
-            <button nz-button class="rb_primary rb_primary_border" nzShape="round" nzType="primary" style="margin-top: 10px;">+</button>
+            <button nz-button class="rb_primary rb_primary_border" nzShape="round" nzType="primary" style="margin-top: 10px;" (click)="addEducation()">+</button>
         </div>
 
     </div>
