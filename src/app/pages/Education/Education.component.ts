@@ -20,8 +20,6 @@ export class EducationComponent implements OnInit {
       startDate:[''],
       endDate:[''],
       summary:['']
-
-
     })
   }
   ngOnInit() {
