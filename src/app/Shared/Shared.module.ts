@@ -10,7 +10,7 @@ import { NzButtonSize } from 'ng-zorro-antd/button';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 @NgModule({
@@ -27,7 +27,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     FormsModule,
     OwlDateTimeModule,
      OwlNativeDateTimeModule,
-     CommonModule
+     CommonModule,
+     ReactiveFormsModule
   ],
   declarations: [SharedComponent],
   exports:[
@@ -42,7 +43,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     FormsModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
 
   ]
 })
