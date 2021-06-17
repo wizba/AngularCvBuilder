@@ -14,6 +14,7 @@ import { IconsProviderModule } from './icons-provider.module';
 import { SharedModule } from './Shared/Shared.module';
 import { ManuComponent } from './Manu/Manu.component';
 import { AngularMyDatePickerModule } from 'angular-mydatepicker';
+import { StoreService } from './services/store/Store.service';
 
 registerLocaleData(en);
 
@@ -29,9 +30,9 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     IconsProviderModule,
     SharedModule,
-    
+
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US },StoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
