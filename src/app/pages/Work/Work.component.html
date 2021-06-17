@@ -7,7 +7,7 @@
 </div>
 
 <div class="rb_conner rb_card_container rb_card">
-  <form action="" style="height: 100%;width: 100%;">
+  <form action="" style="height: 100%;width: 100%;" [formGroup]="workForm">
     <div style="display:flex;padding-left:30px;padding-right:30px;padding-top:30px;position: relative;">
       <nz-badge
       nzStandalone
@@ -19,7 +19,7 @@
       <div class="rb_column">
           <label>Company name</label>
           <nz-input-group [nzSuffix]="nameSuffixInfo" >
-            <input type="text" nz-input placeholder="Enter your username" />
+            <input type="text" nz-input placeholder="Enter your company name" formControlName="comapnyName" />
           </nz-input-group>
 
           <ng-template #nameSuffixInfo>
@@ -33,7 +33,7 @@
       <div class="rb_column">
         <label>Job title</label>
         <nz-input-group [nzSuffix]="surnameSuffix" >
-          <input type="text" nz-input placeholder="Enter your username" />
+          <input type="text" nz-input placeholder="e.g Computer technician" formControlName="jobTitle"/>
         </nz-input-group>
 
         <ng-template #surnameSuffix>
@@ -51,7 +51,7 @@
       <div class="rb_column">
           <label>Country of work</label>
           <nz-input-group [nzSuffix]="nameSuffixInfo" >
-            <input type="text" nz-input placeholder="e.g South Africa" />
+            <input type="text" nz-input placeholder="e.g South Africa" formControlName="countryOfWork"/>
           </nz-input-group>
 
           <ng-template #nameSuffixInfo>
@@ -65,7 +65,7 @@
       <div class="rb_column">
         <label>Location</label>
         <nz-input-group [nzSuffix]="surnameSuffix" >
-          <input type="text" nz-input placeholder="e.g Johannesburg" />
+          <input type="text" nz-input placeholder="e.g Johannesburg" formControlName="location"/>
         </nz-input-group>
 
         <ng-template #surnameSuffix>
@@ -86,7 +86,7 @@
       <div class="rb_column">
           <label >Start date</label>
           <nz-input-group [nzSuffix]="emailSuffix" >
-            <input [owlDateTime]="startDate" [owlDateTimeTrigger]="startDate" placeholder="dd/mm/yyyy" type="text" nz-input  />
+            <input [owlDateTime]="startDate" [owlDateTimeTrigger]="startDate" placeholder="dd/mm/yyyy" type="text" nz-input  formControlName="startDate"/>
             <owl-date-time #startDate></owl-date-time>
           </nz-input-group>
 
@@ -101,7 +101,7 @@
       <div class="rb_column" >
         <label>end date</label>
         <nz-input-group [nzSuffix]="phonenumberSuffix" >
-          <input [owlDateTime]="endDate" [owlDateTimeTrigger]="endDate" placeholder="dd/mm/yyyy" type="text" nz-input [disabled]="checked" />
+          <input [owlDateTime]="endDate" [owlDateTimeTrigger]="endDate" placeholder="dd/mm/yyyy" type="text" nz-input [disabled]="checked" formControlName="endDate"/>
             <owl-date-time #endDate></owl-date-time>
         </nz-input-group>
 
@@ -116,11 +116,11 @@
     </div>
     <div class="rb_field">
       <div>
-        <label class="rb_label">Home address</label>
+        <label class="rb_label">summary</label>
       </div>
       <div style="width: 100%;">
 
-          <textarea nz-input placeholder="Controlled autosize" [nzAutosize]="{ minRows: 3, maxRows: 5 }" style="background-color:#d9d9d9;"></textarea>
+          <textarea nz-input placeholder="Controlled autosize" [nzAutosize]="{ minRows: 1, maxRows: 2 }" style="background-color:#d9d9d9;" formControlName="summary"></textarea>
           <button nz-button class="rb_primary rb_primary_border" nzShape="round" nzType="primary" style="margin-top: 10px;">+</button>
       </div>
 

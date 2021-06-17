@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-Education',
@@ -7,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducationComponent implements OnInit {
 
+  educationForm :FormGroup;
   checked = false;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) {
+    this.educationForm = this.formBuilder.group({
+      institutionName:[''],
+      course:[''],
+      countryOfWork:[''],
+      location:[''],
+      startDate:[''],
+      endDate:[''],
+      summary:['']
 
+
+    })
+  }
   ngOnInit() {
   }
 

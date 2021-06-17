@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { IAngularMyDpOptions, IMyDateModel } from 'angular-mydatepicker';
 
 @Component({
@@ -8,11 +9,30 @@ import { IAngularMyDpOptions, IMyDateModel } from 'angular-mydatepicker';
 })
 export class WorkComponent implements OnInit {
 
+  workForm :FormGroup;
   checked = false;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) {
+    this.workForm = this.formBuilder.group({
+      comapnyName:[''],
+    jobTitle:[''],
+      countryOfWork:[''],
+      location:[''],
+      startDate:[''],
+      endDate:[''],
+      summary:['']
+
+
+    })
+  }
 
   ngOnInit() {
+
+    this.workForm.valueChanges
+    .subscribe(value=>{
+      console.log(value);
+
+    })
   }
 
   DatePickerOptions: IAngularMyDpOptions = {
