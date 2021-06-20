@@ -22,12 +22,14 @@ export class ProjectsComponent implements OnInit {
 
   addProject(){
 
+
+
     if(this.projectForm.valid){
       let project = this.projectForm.value;
       this.storeService.projectsArray.push(project);
+     
     }else{
       console.log('invalid data');
-
     }
 
   }
