@@ -20,6 +20,16 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["core-js-pure/features/array/from","core-js-pure/features/array/is-array",
+              "core-js-pure/features/instance/slice",
+              "core-js-pure/features/object/create",
+              "core-js-pure/features/object/get-own-property-descriptor",
+              "core-js-pure/features/object/set-prototype-of",
+              "core-js-pure/features/promise",
+            "core-js-pure/features/reflect/get",
+          "core-js-pure/features/symbol",
+        "core-js-pure/features/symbol/iterator",
+        "raf","core-js-pure/features/object/define-property","core-js-pure/features/object/get-prototype-of"],
             "outputPath": "dist/test-ng-zorro",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -90,7 +100,9 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+
             "browserTarget": "test-ng-zorro:build"
+
           }
         },
         "test": {

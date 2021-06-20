@@ -111,4 +111,40 @@ body{
  }
 
 
+ .rb_fields_spacing{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  height:750px !important;
 
+ }
+
+ .rb_manu_buttons{
+  padding-left: 55px;padding-right: 55px;padding-top: 30px;margin-bottom:2rem;
+ }
+ .rb_mb{
+  margin-bottom:10rem
+ }
+
+ @media (max-width: 1024px){
+  // body{
+  //   background-color: #ff7070 !important;
+  // }
+
+  .rb_title_color{
+    color: rgb(73, 73, 73);
+  }
+ }
+
+ @media(max-width: 1024px){
+
+      .rb_fields_spacing{
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      min-height:750px;
+    }
+    .rb_manu_buttons{
+      padding-left: 10px;padding-right: 10px;padding-top: 30px;margin-bottom:2rem
+    }
+ }
