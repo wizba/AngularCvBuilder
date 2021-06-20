@@ -34,12 +34,13 @@ export class SkillsComponent implements OnInit,OnDestroy {
          console.log( this.skill.slice(0, -1).split(','));
   }
 
- 
+
   saveSkills(){
     if(this.skillForm.valid){
       let mySkill = this.skillForm.value;
       mySkill['skillName']=this.skill;
       this.storeService.skills.push(mySkill);
+      this.skillForm.reset();
     }else{
       console.log('failed');
     }

@@ -39,6 +39,7 @@ addEducation(){
   if(this.educationForm.valid){
     let education = this.educationForm.value;
     this.storeService.education.push(education);
+    this.educationForm.reset();
   }else{
     console.log('invalid info');
   }

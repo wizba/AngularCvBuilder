@@ -41,6 +41,7 @@ export class ProfileComponent implements OnInit,OnDestroy {
       console.log(formValue);
       if(this.profileForm.valid){
         this.storeService.personalProfile = formValue;
+        this.profileForm.reset();
       }else{
           console.log('invalid results');
 

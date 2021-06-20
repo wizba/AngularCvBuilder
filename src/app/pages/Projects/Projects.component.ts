@@ -10,7 +10,7 @@ import { StoreService } from 'src/app/services/store/Store.service';
 export class ProjectsComponent implements OnInit {
 
   projectForm:FormGroup;
-  constructor(private formBuilder: FormBuilder,private storeService:StoreService ) {
+  constructor(private formBuilder: FormBuilder,public storeService:StoreService ) {
     this.projectForm = this.formBuilder.group({
       projectName:['',[Validators.required]],
       summary:['',[Validators.required]]
@@ -18,6 +18,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   addProject(){
@@ -27,7 +28,9 @@ export class ProjectsComponent implements OnInit {
     if(this.projectForm.valid){
       let project = this.projectForm.value;
       this.storeService.projectsArray.push(project);
-     
+
+      this.projectForm.reset();
+
     }else{
       console.log('invalid data');
     }

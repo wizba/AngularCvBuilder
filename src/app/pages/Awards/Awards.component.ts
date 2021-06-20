@@ -25,6 +25,7 @@ export class AwardsComponent implements OnInit {
     if(this.awardForm.valid){
       let awardValue = this.awardForm.value;
       this.storeService.userAwards.push(awardValue);
+      this.awardForm.reset();
     }
   }
 

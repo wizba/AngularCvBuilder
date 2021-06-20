@@ -53,7 +53,7 @@ changeChecked(){
       let work = this.workForm.value;
       this.storeService.workExperience.push(work);
       console.log(this.storeService.workExperience);
-
+      this.workForm.reset();
     }else{
       console.log('invalid info');
 

@@ -7,12 +7,14 @@
 </div>
 <div class="rb_conner rb_card_container rb_card">
   <form action="" style="height: 100%;width: 100%;" [formGroup]="projectForm">
-    <div style="display:flex;padding-left:30px;padding-right:30px;padding-top:30px;position: relative;">
+    <div style="display:flex;padding-left:30px;padding-right:30px;padding-top:30px;justify-content: end;width: 100%;">
       <nz-badge
+
       nzStandalone
-      [nzCount]="4"
-      [nzStyle]="{ backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }"
-    ></nz-badge>
+      [nzCount]="storeService.projectsArray.length"
+      [nzStyle]="{ backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset',fontSize:'1rem' }"
+    > </nz-badge>
+
     </div>
     <div class="rb_flex">
       <div class="rb_column" style="width:100%">
