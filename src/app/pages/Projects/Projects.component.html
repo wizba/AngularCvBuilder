@@ -9,7 +9,7 @@
   <form action="" style="height: 100%;width: 100%;" [formGroup]="projectForm">
     <div style="display:flex;padding-left:30px;padding-right:30px;padding-top:30px;justify-content: end;width: 100%;">
       <nz-badge
-
+      *ngIf="storeService.projectsArray.length"
       nzStandalone
       [nzCount]="storeService.projectsArray.length"
       [nzStyle]="{ backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset',fontSize:'1rem' }"
@@ -24,8 +24,8 @@
           </nz-input-group>
 
           <ng-template #nameSuffixInfo>
-          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" >
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'" *ngIf="getControl.projectName.invalid && getControl.projectName.touched">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" *ngIf="getControl.projectName.invalid && getControl.projectName.touched">
               <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
             </svg>
           </label>

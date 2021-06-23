@@ -18,12 +18,11 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
+console.log(this.storeService.projectsArray.length);
 
   }
 
   addProject(){
-
-
 
     if(this.projectForm.valid){
       let project = this.projectForm.value;
@@ -35,6 +34,9 @@ export class ProjectsComponent implements OnInit {
       console.log('invalid data');
     }
 
+  }
+  get getControl(){
+    return this.projectForm.controls;
   }
 
 }

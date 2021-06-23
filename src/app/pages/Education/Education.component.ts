@@ -12,7 +12,7 @@ export class EducationComponent implements OnInit {
   educationForm :FormGroup;
   checked = false;
 
-  constructor(private formBuilder: FormBuilder,private storeService:StoreService) {
+  constructor(private formBuilder: FormBuilder,public storeService:StoreService) {
     this.educationForm = this.formBuilder.group({
       institutionName:['',[Validators.required]],
       course:[''],

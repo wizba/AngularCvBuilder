@@ -36,17 +36,18 @@ export class ProfileComponent implements OnInit,OnDestroy {
   //saves user profile on distroy
   savePersonalinfor(){
       let formValue = this.profileForm.value;
-
-
       console.log(formValue);
       if(this.profileForm.valid){
         this.storeService.personalProfile = formValue;
         this.profileForm.reset();
       }else{
           console.log('invalid results');
-
       }
 
+  }
+
+  get getControl(){
+    return this.profileForm.controls;
   }
 
 }

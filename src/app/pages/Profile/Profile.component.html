@@ -17,9 +17,9 @@
           <input type="text" nz-input placeholder="Enter your username" formControlName="name"/>
         </nz-input-group>
 
-        <ng-template #nameSuffixInfo>
-          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor">
+        <ng-template #nameSuffixInfo >
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'name is required'" *ngIf="getControl.name.touched && getControl.name.invalid">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" *ngIf="getControl.name.touched && getControl.name.invalid">
               <path fill-rule="evenodd"
                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                 clip-rule="evenodd" />
@@ -35,8 +35,8 @@
 
         <ng-template #surnameSuffix>
           <label nzTooltipTitle="Extra information" nzType="info-circle">
-            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor">
+            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'surname is required'" *ngIf="getControl.surname.touched && getControl.surname.invalid">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" *ngIf="getControl.surname.touched && getControl.surname.invalid">
                 <path fill-rule="evenodd"
                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                   clip-rule="evenodd" />
@@ -54,8 +54,8 @@
         </nz-input-group>
 
         <ng-template #emailSuffix>
-          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor">
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'email is required'" *ngIf="getControl.email.touched && getControl.email.invalid">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" *ngIf="getControl.email.touched && getControl.email.invalid">
               <path fill-rule="evenodd"
                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                 clip-rule="evenodd" />
@@ -70,8 +70,8 @@
         </nz-input-group>
 
         <ng-template #phonenumberSuffix>
-          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor">
+          <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'phone number is reuired'" *ngIf="getControl.phoneNumber.touched && getControl.phoneNumber.invalid">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" *ngIf="getControl.phoneNumber.touched && getControl.phoneNumber.invalid">
               <path fill-rule="evenodd"
                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                 clip-rule="evenodd" />
@@ -93,8 +93,8 @@
           </nz-input-group>
 
           <ng-template #homeAddressSuffix>
-            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor">
+            <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'address is required'"  *ngIf="getControl.address.touched && getControl.address.invalid">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" *ngIf="getControl.address.touched && getControl.address.invalid">
                 <path fill-rule="evenodd"
                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                   clip-rule="evenodd" />
@@ -113,8 +113,8 @@
               <input type="text" nz-input placeholder="e.g william.linked.com" formControlName="linkedin"/>
             </nz-input-group>
             <ng-template #linkSuffix>
-              <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'error occured'">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor">
+              <label nz-tooltip [nzTooltipPlacement]="'top'" [nzTooltipTitle]="'link is required'" *ngIf="getControl.linkedin.touched && getControl.linkedin.invalid">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" *ngIf="getControl.linkedin.touched && getControl.linkedin.invalid">
                   <path fill-rule="evenodd"
                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                     clip-rule="evenodd" />

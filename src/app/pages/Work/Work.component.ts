@@ -13,7 +13,7 @@ export class WorkComponent implements OnInit {
   workForm :FormGroup;
   checked = false;
 
-  constructor(private formBuilder: FormBuilder,private storeService:StoreService) {
+  constructor(private formBuilder: FormBuilder,public storeService:StoreService) {
     this.workForm = this.formBuilder.group({
       comapnyName:['',[Validators.required]],
     jobTitle:['',[Validators.required]],

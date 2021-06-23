@@ -13,7 +13,7 @@ export class SkillsComponent implements OnInit,OnDestroy {
   skillForm:FormGroup;
   currentSkills:string[] =[];//temporarily holds current skill
   skill:string='';
-  constructor(private formBuilder: FormBuilder,private storeService:StoreService) {
+  constructor(private formBuilder: FormBuilder,public storeService:StoreService) {
     this.skillForm = this.formBuilder.group({
       groupName:['',[Validators.required]],
       skillName:['',[Validators.required]]
